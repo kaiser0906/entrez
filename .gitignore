@@ -1,0 +1,12 @@
+*.egg-info
+__pycache__
+*.pyc
+
+.coverage
+.idea/
+.pytest_cache/
+.tox/
+build/
+dist/
+out.csv
+tests/assets/large_data.xml

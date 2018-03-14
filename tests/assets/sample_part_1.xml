@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!DOCTYPE TSeqSet PUBLIC "-//NCBI//NCBI TSeq/EN" "https://www.ncbi.nlm.nih.gov/dtd/NCBI_TSeq.dtd">
+<TSeqSet>
+    <TSeq>
+        <TSeq_seqtype value="nucleotide"/>
+        <TSeq_accver>NC_004718.3</TSeq_accver>
+        <TSeq_sid>gnl|NCBI_GENOMES|17014</TSeq_sid>
+        <TSeq_taxid>227859</TSeq_taxid>
+        <TSeq_orgname>SARS coronavirus</TSeq_orgname>
+        <TSeq_defline>SARS coronavirus, complete genome</TSeq_defline>
+        <TSeq_length>29751</TSeq_length>
+        <TSeq_sequence>ATATTAGGTTTTTACCTACCCAGGAAAAGA
