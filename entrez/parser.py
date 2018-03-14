@@ -35,7 +35,7 @@ class Parser(object):
         self.pattern = re.compile(pattern)
         self.filename = filename
         self.file = open(filename, 'wt')
-        self.position = self.start = self.end = 0
+        self.position = 0
         self.hit = defaultdict(int)
         self.window = ''
 
