@@ -86,9 +86,10 @@ class Parser(object):
                 self.hit[m.group()] += 1
             # Update the last data position.
             # Next chunk's first data needs +1 because index starts 0
-            self.position += len(data)
+            data_len = len(data)
+            self.position += data_len
             # Set up window for matches can be broken by chunks.
-            window_size = min(len(self._pattern), len(data) - last_ended)
+            window_size = min(len(self._pattern), data_len - last_ended)
             self.window = data[window_size * -1:] if window_size else ''
             self.position -= window_size
 
