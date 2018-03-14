@@ -69,13 +69,13 @@ positions of the first and last characters, respectively).
 Installation
 -----
 
-For useage:
+For usage:
 
     $ pip install git+https://github.com/kaiser0906/entrez.git@version
 
 For development:
 
-    $ git clone git@github.com/kaiser0906/entrez.git@version
+    $ git clone git@github.com:kaiser0906/entrez.git@version
     $ pip install entrez/
     # or
     $ python entrez/setup.py install
@@ -108,14 +108,13 @@ Run your application with the following input parameters:
 
 **Sample run commands:**
 
-    $ entrez -d nucleotide -d 30271926 -r "A|T|C|G"
+    $ entrez -d nucleotide -i 30271926 -r "A|T|C|G"
     # or
     $ python /path/to/entrez.py --db=nucleotide --id=30271926 --regex=(A|C|G|T) --file=out.txt
     T	9143
     A	8481
     G	6187
     C	5940
-    Total elapsed time: 0.565 sec
 
 **Sample of output file:**
 
