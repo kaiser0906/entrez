@@ -17,10 +17,9 @@ class Parser(object):
         filename (str): filename(path) for the result.
         file (File): file object for storing result.
         position (int): last index of data in accumulated chunks.
-        start (int): index of first sequence data matched.
-        end (int): index of last sequence ata matched.
         hit (defaultdict): stores matches with counts and sorted by # in desc.
             i.e. {'AAAC': 5, 'AAAB': 3, 'AAAA': 1}
+        window (str): partial data for regex search between the gap of chunks.
     """
     data_fields = ('accver', 'sid', 'taxid', 'orgname', 'defline', 'length',)
 

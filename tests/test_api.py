@@ -86,7 +86,7 @@ class EntrezAPITestCase(TestCase):
         self.api.db = '~mydb'
         self.assertEqual(self.api.url, self.get_url(db='%7Emydb'))
 
-    @patch('sys.stdout', new_callable=StringIO)
+    @patch('sys.stderr', new_callable=StringIO)
     @patch('requests.get', side_effect=mocked_requests_get)
     def test_page_not_found(self, mock_get, mock_out):
         self.api._url = 'http://google.com/foo'

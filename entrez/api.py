@@ -1,4 +1,7 @@
 import argparse
+
+import sys
+
 try:
     from urlparse import urlsplit
     from urllib import unquote, urlencode
@@ -56,7 +59,7 @@ class EntrezAPI(object):
         """
         with requests.get(self.url, stream=True) as r:
             if r.status_code != requests.codes.ok:
-                print('%s %s' % (r.status_code, r.reason))
+                print('%s %s' % (r.status_code, r.reason), file=sys.stderr)
                 return
 
             # Run when the request succeed.
