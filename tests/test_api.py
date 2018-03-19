@@ -46,6 +46,12 @@ class MockResponse(object):
                     break
                 yield chunk
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
 
 def mocked_requests_get(*args, **kwargs):
     if args[0] == EntrezAPITestCase.get_url():

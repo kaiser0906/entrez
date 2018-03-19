@@ -53,18 +53,16 @@ class EntrezAPI(object):
     def run(self):
         """Downloads data stream via the search url and
         publishes regex hit sequences to file as well as screen.
-
-        The sequence
         """
-        r = requests.get(self.url, stream=True)
-        if r.status_code != requests.codes.ok:
-            print('%s %s' % (r.status_code, r.reason))
-            return
+        with requests.get(self.url, stream=True) as r:
+            if r.status_code != requests.codes.ok:
+                print('%s %s' % (r.status_code, r.reason))
+                return
 
-        # Run when the request succeed.
-        with Parser(pattern=self.pattern, filename=self.filename) as p:
-            for chunk in r.iter_content(chunk_size=CHUNK_SIZE):
-                p.feed(chunk)
+            # Run when the request succeed.
+            with Parser(pattern=self.pattern, filename=self.filename) as p:
+                for chunk in r.iter_content(chunk_size=CHUNK_SIZE):
+                    p.feed(chunk)
 
 
 def main():
